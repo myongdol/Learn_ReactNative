@@ -8,7 +8,7 @@ export default function App() {
         <Text>dd</Text>
         <Text>dd</Text>
         </View>
-      <Text>aa</Text>
+      <Text style={styles.myText}>안녕하세요</Text>
       <Button title="클릭" />
     </View>
   );
@@ -21,4 +21,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  myText: {
+    margin: 16,
+    borderWidth: 2,
+    borderColor: 'red',
+    padding: 16
+  }
 });
