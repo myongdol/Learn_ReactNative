@@ -3,13 +3,15 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   const [enteredGoal, setEnteredGoal] = useState('');
+  const [goals, setGoals] = useState([]);
 
   function userInputHandler(enteredText) {
     setEnteredGoal(enteredText);
   };
 
-  function addGoalHandler() {
-    console.log(enteredGoal)
+  function addGoalHandler() { 
+    // setGoals([...goals, enteredGoal]);
+    setGoals(currentGoals => [...currentGoals, enteredGoal]);
   };
 
   return (
@@ -26,7 +28,12 @@ export default function App() {
         />
       </View>
       <View style={styles.listContainer}>
-        <Text>목표 리스트</Text>
+        {/* <Text>목표 리스트</Text> */}
+        {goals.map((goal) =>  //  key 변경예정
+          <Text key={goal}>
+            {goal}
+          </Text>
+        )}
       </View>
     </View>
   );
