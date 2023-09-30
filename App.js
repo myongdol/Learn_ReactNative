@@ -1,11 +1,29 @@
+import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
+  const [enteredGoal, setEnteredGoal] = useState('');
+
+  function userInputHandler(enteredText) {
+    setEnteredGoal(enteredText);
+  };
+
+  function addGoalHandler() {
+    console.log(enteredGoal)
+  };
+
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.textInput} placeholder='목표를 입력 해주세요.'/>
-        <Button title='목표 추가'/>
+        <TextInput 
+         style={styles.textInput}
+         placeholder='목표를 입력 해주세요.'
+         onChangeText={userInputHandler}
+        />
+        <Button 
+         title='목표 추가'
+         onPress={addGoalHandler}
+        />
       </View>
       <View style={styles.listContainer}>
         <Text>목표 리스트</Text>
