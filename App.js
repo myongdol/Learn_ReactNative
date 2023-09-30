@@ -28,11 +28,13 @@ export default function App() {
         />
       </View>
       <View style={styles.listContainer}>
-        {/* <Text>목표 리스트</Text> */}
-        {goals.map((goal) =>  //  key 변경예정
-          <Text key={goal}>
-            {goal}
-          </Text>
+        {goals.map((goal) => (  //  key 변경예정
+          <View style={styles.goalItem} key={goal}>
+            <Text style={styles.textColor}>
+              {goal}
+            </Text>
+          </View>
+          )
         )}
       </View>
     </View>
@@ -63,5 +65,14 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 6
+  },
+  goalItem: {
+    margin: 4,
+    padding: 10,
+    borderRadius: 15,
+    backgroundColor: '#437299',
+  },
+  textColor: {
+    color: 'white',
   }
 });
