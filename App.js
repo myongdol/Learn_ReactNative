@@ -13,6 +13,10 @@ export default function App() {
     ]);
   };
 
+  function deleteGoalHandler() {
+    console.log('삭제!')
+  };
+ 
   return (
     <View style={styles.appContainer}>
         <GoalInput 
@@ -23,7 +27,10 @@ export default function App() {
           data={goals}
           renderItem={(itemData) => {
             return (
-              <GoalItem text={itemData.item.text}/>
+              <GoalItem 
+               text={itemData.item.text}
+               onDelete={deleteGoalHandler}
+              />
             );
           }}
           keyExtractor={(item, index) => {

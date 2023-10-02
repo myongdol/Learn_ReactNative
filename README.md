@@ -6,3 +6,4 @@
 [onChangeText & onPress](https://blog.naver.com/ares132/223225278756)  
 [리스트 렌더링 하기](https://blog.naver.com/ares132/223225336234)  
 [FlatList](https://blog.naver.com/ares132/223225976748)  
+[Pressable](https://blog.naver.com/ares132/223226634825)  
