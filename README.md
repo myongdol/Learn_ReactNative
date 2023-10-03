@@ -7,3 +7,4 @@
 [리스트 렌더링 하기](https://blog.naver.com/ares132/223225336234)  
 [FlatList](https://blog.naver.com/ares132/223225976748)  
 [Pressable](https://blog.naver.com/ares132/223226634825)  
+[항목 삭제하기](https://blog.naver.com/ares132/223227370230)  
