@@ -33,6 +33,7 @@ function GoalInput(props){
             <View style={styles.button}>
             <Button 
                title="취소"
+               onPress={props.onCancel}
             />
             </View>
           </View>

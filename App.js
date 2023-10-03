@@ -9,13 +9,18 @@ export default function App() {
 
   function startAddGoalHandler() {
     setModalVisible(true);
-  }
+  };
+
+  function endAddGoalHandler() {
+    setModalVisible(false)
+  };
 
   function addGoalHandler(enteredGoal) { 
     setGoals((currentGoals) => [
       ...currentGoals,
       {text: enteredGoal, id: Math.random().toString()}
     ]);
+    endAddGoalHandler();
   };
 
   function deleteGoalHandler(id) {
@@ -30,6 +35,7 @@ export default function App() {
         <GoalInput 
           visible={modalVisible}
           onAddGoal={addGoalHandler}
+          onCancel={endAddGoalHandler}
         />
       <View style={styles.listContainer}>
         <FlatList 

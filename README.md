@@ -8,3 +8,4 @@
 [FlatList](https://blog.naver.com/ares132/223225976748)  
 [Pressable](https://blog.naver.com/ares132/223226634825)  
 [항목 삭제하기](https://blog.naver.com/ares132/223227370230)  
+[모달](https://blog.naver.com/ares132/223227452635)  
