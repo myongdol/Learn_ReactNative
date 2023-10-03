@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Button, TextInput, StyleSheet, Modal } from "react-native";
+import { View, Button, TextInput, StyleSheet, Modal, Image } from "react-native";
 
 function GoalInput(props){
     const [enteredGoal, setEnteredGoal] = useState('');
@@ -16,6 +16,9 @@ function GoalInput(props){
     return (
       <Modal visible={props.visible} animationType="slide">
         <View style={styles.inputContainer}>
+         <Image style={styles.image} source={require('../assets/images/moko.png')}
+            fadeDuration={500}
+         />
           <TextInput 
              style={styles.textInput}
              placeholder='목표를 입력 해주세요.'
@@ -51,10 +54,8 @@ function GoalInput(props){
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 24,
         padding: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: '#cccccc'
+        backgroundColor: '#efefef',
       },
       textInput: {
         borderWidth: 1,
@@ -69,5 +70,10 @@ function GoalInput(props){
       button: {
          width: 100,
          marginHorizontal: 8,
+      },
+      image: {
+         width: 100,
+         height: 100,
+         margin: 20,
       }
  })
