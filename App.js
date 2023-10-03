@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, Button } from 'react-native';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
 
 export default function App() {
   const [goals, setGoals] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false); 
+
+  function startAddGoalHandler() {
+    setModalVisible(true);
+  }
 
   function addGoalHandler(enteredGoal) { 
     setGoals((currentGoals) => [
@@ -21,7 +26,9 @@ export default function App() {
  
   return (
     <View style={styles.appContainer}>
+      <Button title='추가' color="#5e0acc" onPress={startAddGoalHandler}/>
         <GoalInput 
+          visible={modalVisible}
           onAddGoal={addGoalHandler}
         />
       <View style={styles.listContainer}>

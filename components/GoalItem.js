@@ -11,7 +11,6 @@ function GoalItem(itemDataProp) {
           <Text style={styles.textColor}>{itemDataProp.text}</Text>
         </Pressable>
     </View>
-
  )
 };
 
