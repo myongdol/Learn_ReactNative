@@ -9,4 +9,5 @@
 [Pressable](https://blog.naver.com/ares132/223226634825)  
 [항목 삭제하기](https://blog.naver.com/ares132/223227370230)  
 [모달](https://blog.naver.com/ares132/223227452635)  
-[Image](https://blog.naver.com/ares132/223227486596)
+[Image](https://blog.naver.com/ares132/223227486596)  
+[앱 디버깅](https://blog.naver.com/ares132/223229282125)  

@@ -16,7 +16,9 @@ function GoalInput(props){
     return (
       <Modal visible={props.visible} animationType="slide">
         <View style={styles.inputContainer}>
-         <Image style={styles.image} source={require('../assets/images/moko.png')}
+         <Image 
+            style={styles.image} 
+            source={require('../assets/images/moko.png')}
             fadeDuration={500}
          />
           <TextInput 
@@ -47,6 +49,7 @@ function GoalInput(props){
     )
  };
 
+ console.log('안녕하세요 !?')
 
  export default GoalInput;
 
