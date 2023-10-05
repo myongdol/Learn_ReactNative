@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, View, FlatList, Button } from 'react-native';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   const [goals, setGoals] = useState([]);
@@ -30,8 +31,10 @@ export default function App() {
   };
  
   return (
+    <>
+    <StatusBar style='light'/>
     <View style={styles.appContainer}>
-      <Button title='추가' color="#5e0acc" onPress={startAddGoalHandler}/>
+      <Button title='추가' color="#a065ec" onPress={startAddGoalHandler}/>
         <GoalInput 
           visible={modalVisible}
           onAddGoal={addGoalHandler}
@@ -55,6 +58,7 @@ export default function App() {
         /> 
       </View>
     </View>
+    </>
   );
 }
 
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
   appContainer: {
    flex: 1,
    padding: 50,
-   paddingHorizontal: 16
+   paddingHorizontal: 16,
   },
   listContainer: {
     flex: 6
