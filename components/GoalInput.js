@@ -30,6 +30,7 @@ function GoalInput(props){
             <Button 
                title='목표 추가'
                onPress={addGoalHandler}
+               color="#5e0acc"
             />
             </View>
 
@@ -37,6 +38,7 @@ function GoalInput(props){
             <Button 
                title="취소"
                onPress={props.onCancel}
+               color="#f31282"
             />
             </View>
           </View>
@@ -59,9 +61,12 @@ function GoalInput(props){
       },
       textInput: {
         borderWidth: 1,
-        borderColor: '#cccccc',
+        borderRadius: 12,
+        borderColor: '#e4d0ff',
         width: '100%',
-        padding: 8,
+        padding: 16,
+        backgroundColor: '#e4d0ff',
+        color: '#120438',
       },
       buttonContainer: {
          flexDirection: 'row',
